@@ -493,38 +493,30 @@ const DATA = {
 
 const SIGIL_DB = [
     { n: "Killer Arachnocrab", s: ["Weapon"], d: { 1: {"Adaptive MainStat": 70, "Endurance": 235}, 2: {"Adaptive MainStat": 75, "Endurance": 255}, 3: {"Adaptive MainStat": 80, "Endurance": 275} } },
+    
     { n: "Predator Arachnocrab", s: ["Weapon","Earrings","Necklace","Ring"], d: { 1: {"All Element Attack": 66}, 2: {"All Element Attack": 72}, 3: {"All Element Attack": 80} } },
-    { n: "Emerald Caprahorn", s: ["Weapon","Earrings","Necklace","Ring"], d: { 1: {Endurance:80, Strength:25}, 2: {Endurance:90, Strength:30}, 3: {Endurance:100, Strength:35} } },
-    { n: "Blackstone Commander", s: ["Weapon","Earrings","Necklace","Ring"], d: { 1: {Endurance:80, Intellect:25}, 2: {Endurance:90, Intellect:30}, 3: {Endurance:100, Intellect:35} } },
-    { n: "Blackfire Foxen", s: ["Weapon","Earrings","Necklace","Ring"], d: { 1: {Endurance:80, Agility:25}, 2: {Endurance:90, Agility:30}, 3: {Endurance:100, Agility:35} } },
-    { n: "Flamehorn", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Versatility:500}, 2: {Versatility:500}, 3: {Versatility:500} } },
-    { n: "Blackstone Captain", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Mastery:500}, 2: {Mastery:560}, 3: {Mastery:600} } },
-    { n: "Cabbage Kingpin", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Luck:500}, 2: {Luck:560}, 3: {Luck:600} } },
-    { n: "Crimson Foxen", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Haste:500}, 2: {Haste:560}, 3: {Haste:600} } },
-    { n: "Goblin Chief", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Crit:500}, 2: {Crit:560}, 3: {Crit:600} } },
-    { n: "Cabbage Blaster", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Versatility:200}, 2: {Versatility:250}, 3: {Versatility:300} } },
-    { n: "Glimmer Caprahorn", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Mastery:200}, 2: {Mastery:250}, 3: {Mastery:300} } },
-    { n: "Cabbage Tough Guy", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Luck:200}, 2: {Luck:250}, 3: {Luck:300} } },
-    { n: "Wasteland Foxen", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Haste:200}, 2: {Haste:250}, 3: {Haste:300} } },
-    { n: "Cabbage Killer", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Crit:200}, 2: {Crit:250}, 3: {Crit:300} } },
-    { n: "Blackstone Vanguard", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Haste:300}, 2: {Haste:360}, 3: {Haste:420} } },
-    { n: "Ruthless Cabbage", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Luck:300}, 2: {Luck:360}, 3: {Luck:420} } },
-    { n: "Gloomy Cabbage", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Crit:300}, 2: {Crit:360}, 3: {Crit:420} } },
-    { n: "Goblin Shaman", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Versatility:300}, 2: {Versatility:360}, 3: {Versatility:420} } },
-    { n: "Goblin Trickster", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Mastery:300}, 2: {Mastery:360}, 3: {Mastery:420} } },
-    { n: "Frost Lizard", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Strength:12, Crit:140}, 2: {Strength:16, Crit:175}, 3: {Strength:20, Crit:210} } },
-    { n: "Magma Lizard", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Strength:12, Haste:140}, 2: {Strength:16, Haste:175}, 3: {Strength:20, Haste:210} } },
-    { n: "Gale Lizard", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Strength:12, Luck:140}, 2: {Strength:16, Luck:175}, 3: {Strength:20, Luck:210} } },
-    { n: "Lightning Lizard", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Strength:12, Mastery:140}, 2: {Strength:16, Mastery:175}, 3: {Strength:20, Mastery:210} } },
-    { n: "Blackstone Marksman", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Intellect:12, Crit:140}, 2: {Intellect:16, Crit:175}, 3: {Intellect:20, Crit:210} } },
-    { n: "Blackstone Guard", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Intellect:12, Haste:140}, 2: {Intellect:16, Haste:175}, 3: {Intellect:20, Haste:210} } },
-    { n: "Blackstone Warrior", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Intellect:12, Luck:140}, 2: {Intellect:16, Luck:175}, 3: {Intellect:20, Luck:210} } },
-    { n: "Blackstone Assaulter", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Intellect:12, Mastery:140}, 2: {Intellect:16, Mastery:175}, 3: {Intellect:20, Mastery:210} } },
-    { n: "Goblin Warrior", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Agility:12, Crit:140}, 2: {Agility:16, Crit:175}, 3: {Agility:20, Crit:210} } },
-    { n: "Goblin Axeman", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Agility:12, Haste:140}, 2: {Agility:16, Haste:175}, 3: {Agility:20, Haste:210} } },
-    { n: "Goblin Priest", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Agility:12, Luck:140}, 2: {Agility:16, Luck:175}, 3: {Agility:20, Luck:210} } },
-    { n: "Goblin Guard", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Agility:12, Mastery:140}, 2: {Agility:16, Mastery:175}, 3: {Agility:20, Mastery:210} } }
-];
+    { n: "Wasteland Arachnocrab", s: ["Weapon","Earrings","Necklace","Ring"], d: { 1: {MATK:38}, 2: {MATK:38}, 3: {MATK:38} } },
+    { n: "Infernal Arachnocrab", s: ["Weapon","Earrings","Necklace","Ring"], d: { 1: {ATK:38}, 2: {ATK:38}, 3: {ATK:38} } },
+    { n: "Void Watcher", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Mastery:1010, Versatility:880}, 2: {Mastery:1010, Versatility:880}, 3: {Mastery:1010, Versatility:880} } },
+    { n: "Bloodthirsty Furball", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Luck:1010, Versatility:880}, 2: {Luck:1010, Versatility:880}, 3: {Luck:1010, Versatility:880} } },
+    { n: "Ridge Fang", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Haste:1010, Versatility:880}, 2: {Haste:1010, Versatility:880}, 3: {Haste:1010, Versatility:880} } },
+    { n: "Rebel King", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Crit:1010}, 2: {Crit:1010, Versatility:880}, 3: {Crit:1010, Versatility:880} } },
+    { n: "Mechacore Oculoid", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Versatility:620}, 2: {Versatility:620}, 3: {Versatility:620} } },
+    { n: "Patroling Oculoid", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Mastery:620}, 2: {Mastery:620}, 3: {Mastery:620} } },
+    { n: "Spiky Furball", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Luck:620}, 2: {Luck:620}, 3: {Luck:620} } },
+    { n: "Gnashing Furball", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Haste:620}, 2: {Haste:620}, 3: {Haste:620} } },
+    { n: "Hunter Mountain Boar", s: ["Helmet","Chest","Gloves","Boots"], d: { 1: {Crit:620}, 2: {Crit:620}, 3: {Crit:620} } },
+
+    { n: "Sanctuary Eye", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Mastery:750, Versatility:620}, 2: {Mastery:750, Versatility:620}, 3: {Mastery:750, Versatility:620} } },
+    { n: "Man-Eating Furball", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Haste:750, Versatility:620}, 2: {Luck:750, Versatility:620}, 3: {Luck:750, Versatility:620} } },
+    { n: "Verdan Fang", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Haste:750, Versatility:620}, 2: {Haste:750, Versatility:620}, 3: {Haste:750, Versatility:620} } },
+    { n: "Dogorman", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Crit:750, Versatility:620}, 2: {Crit:750, Versatility:620}, 3: {Crit:750, Versatility:620} } },
+    
+    
+    { n: "Wild Mountain Boar", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Agility:60, Endurance:195}, 2: {Agility:60, Endurance:195}, 3: {Agility:60, Endurance:195} } },
+    { n: "Ashen Yeti", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Intellect:60, Endurance:195}, 2: {Intellect:60, Endurance:195}, 3: {Intellect:60, Endurance:195} } },
+    { n: "Sandstone Lizard", s: ["Bracelet (L)","Bracelet (R)","Charm"], d: { 1: {Strength:60, Endurance:195}, 2: {Strength:60, Endurance:195}, 3: {Strength:60, Endurance:195} } },
+    ];
 
 SIGIL_DB.forEach(s => {
     const k = Object.keys(s.d[1]);
