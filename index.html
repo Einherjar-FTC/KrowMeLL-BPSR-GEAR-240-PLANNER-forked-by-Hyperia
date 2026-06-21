@@ -437,7 +437,34 @@ const DATA = {
         },
         Helmet: {
             opts: [
-                { n: "Cast Speed %", v: [2.0], u: "%" } // Dyn name
+                { n: "Cast Speed %", v: [2.0], u: "%" }, // Dyn name
+                { n: "Max HP", v: [5000], u: "" }, 
+                { n: "Armor", v: [320], u: "" },
+                { n: "All Elem Res", v: [160], u: "" }
+            ]
+        },
+        Chest: {
+            opts: [
+                { n: "Shield %", v: [4.0], u: "%" }, // Dyn name
+                { n: "Max HP", v: [5000], u: "" }, 
+                { n: "Armor", v: [320], u: "" },
+                { n: "All Elem Res", v: [160], u: "" }
+            ]
+        },
+        Gloves: {
+            opts: [
+                { n: "Attack Speed", v: [1.0], u: "%" }, // Dyn name
+                { n: "Max HP", v: [5000], u: "" }, 
+                { n: "Armor", v: [320], u: "" },
+                { n: "All Elem Res", v: [160], u: "" }
+            ]
+        },
+        Boots: {
+            opts: [
+                { n: "Movement Speed", v: [500], u: "" }, // Dyn name
+                { n: "Max HP", v: [5000], u: "" }, 
+                { n: "Armor", v: [320], u: "" },
+                { n: "All Elem Res", v: [160], u: "" }
             ]
         },
         ACC: {
@@ -620,8 +647,7 @@ const UI = {
             const sigilOpts = `<option value="">-</option>` + slotSigils.map(s => createOpt(s.n)).join('');
             
             // Generate Legendary Options based on slot type
-            const isArmorGroup = DATA.SLOT_CATS.ARMOR.includes(slot);
-            const legGroup = isArmorGroup ? DATA.LEGENDARY_DATA.ARMOR : DATA.LEGENDARY_DATA.ACC;
+            const legGroup = DATA.LEGENDARY_DATA[slot] || (DATA.SLOT_CATS.ARMOR.includes(slot) ? DATA.LEGENDARY_DATA.ARMOR : DATA.LEGENDARY_DATA.ACC);
             
             let legTypeOpts = `<option value="">-</option>`;
             legGroup.opts.forEach(opt => {
@@ -670,9 +696,7 @@ const UI = {
             valSelect.innerHTML = `<option value="0">-</option>`;
             return;
         }
-
-        const isArmorGroup = DATA.SLOT_CATS.ARMOR.includes(slot);
-        const legGroup = isArmorGroup ? DATA.LEGENDARY_DATA.ARMOR : DATA.LEGENDARY_DATA.ACC;
+        const legGroup = DATA.LEGENDARY_DATA[slot] || (DATA.SLOT_CATS.ARMOR.includes(slot) ? DATA.LEGENDARY_DATA.ARMOR : DATA.LEGENDARY_DATA.ACC);
         
         // Find option data based on original name or adapted name
         let optData = legGroup.opts.find(o => o.n === type); 
