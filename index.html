@@ -1164,16 +1164,13 @@ const Optimizer = {
             const data = DATA.IMAGINE.OPTIONS[im.key];
             if(data) raw[data.stat] += data.vals[im.lvl];
         });
-        if (layout.gear[0].raid && ctx.bonus && ctx.bonus.t === 'p') {
-            if (ctx.bonus.l === "Luck") raw.Luck *= (1 + ctx.bonus.v/100);
-            if (ctx.bonus.l.includes("Vers")) raw.Versatility *= (1 + ctx.bonus.v/100);
-        }
+
         return {
             v: Logic.getStatPercent("Versatility", raw.Versatility),
             m: Logic.getStatPercent("Mastery", raw.Mastery),
             h: Logic.getStatPercent("Haste", raw.Haste),
             c: Logic.getStatPercent("Crit", raw.Crit),
-            l: Logic.getStatPercent("Luck", raw.Luck)
+            l: Logic.getStatPercent("Luck", raw.Luck) + (layout.gear[0].raid && ctx.bonus && ctx.bonus.l === "Luck" ? ctx.bonus.v : 0)
         };
     },
 
