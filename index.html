@@ -937,12 +937,7 @@ const Logic = {
             }
         });
 
-        total.Haste += (baseAgi * 0.45);
-
-        if (raidBonus && raidBonus.t === 'p') {
-            if (raidBonus.l === "Luck") total.Luck *= (1 + raidBonus.v/100);
-            if (raidBonus.l.includes("Vers")) total.Versatility *= (1 + raidBonus.v/100);
-        }
+        total.Haste += (baseAgi * 0.45); // agility->haste conversion
 
         // BUG FIX: ID MAPPING for Raw Stats
         const statIdMap = {
@@ -963,7 +958,15 @@ const Logic = {
         const pMast = Logic.getStatPercent("Mastery", total.Mastery);
         const pHaste = Logic.getStatPercent("Haste", total.Haste);
         const pCrit = Logic.getStatPercent("Crit", total.Crit);
-        const pLuck = Logic.getStatPercent("Luck", total.Luck);
+        let pLuck = Logic.getStatPercent("Luck", total.Luck);
+
+        if (raidBonus && raidBonus.l === "Luck") {
+    pLuck += raidBonus.v; // Fügt die 6.0 direkt als +6% auf das Endergebnis hinzu
+}
+// Falls in Zukunft andere Specs mit Versatility-Raid-Bonus flach berechnet werden sollen:
+if (raidBonus && raidBonus.l.includes("Vers")) {
+    // pVers += raidBonus.v; // Optional, falls gewünscht
+}
 
         $('r-vers').innerText = pVers.toFixed(2) + "%";
         $('r-mast').innerText = pMast.toFixed(2) + "%";
